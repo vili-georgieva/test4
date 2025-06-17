@@ -14,10 +14,11 @@ function findSpaceship(map) {
 	}
 	return "Spaceship lost forever.";
 }
-function StringCalculator() { }
 StringCalculator.prototype.add = function (coordinates) {
-	if(findSpaceship(coordinates) === "Spaceship lost forever.") {
-		return "Spaceship lost forever.";
-	}
-	return [x_coordinate, y_coordinate] = findSpaceship(coordinates);
+    const result = findSpaceship(coordinates); // Store the result of findSpaceship
+    if (result === "Spaceship lost forever.") {
+        return result; // Return the error message directly
+    }
+    const [x_coordinate, y_coordinate] = result; // Destructure the result into variables
+    return { x_coordinate, y_coordinate }; // Return as an object
 };
