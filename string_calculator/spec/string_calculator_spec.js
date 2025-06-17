@@ -1,4 +1,9 @@
+/* global describe, it, expect, beforeEach , require */
+
+const StringCalculator = require('../src/string_calculator');
+
 describe('String Calculator', function () {
+	let calculator;
 	beforeEach(function () {
 		calculator = new StringCalculator();
 	});
